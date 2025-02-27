@@ -1,0 +1,1594 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+
+<head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Baytech</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="public/assets/logo.svg" />
+
+    <!-- Font Poppins & Clash Display -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" />
+
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="./public/output.css" />
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+    <!-- Typed.js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jarallax/1.12.8/jarallax.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<body class="cursor-dark-sword overflow-x-hidden">
+    <!-- Header Start -->
+    <header class="absolute top-0 left-0 z-10 flex w-full items-center bg-transparent py-4">
+        <div class="container">
+            <div class="relative flex items-center justify-between">
+                <!-- Logo and Brand Name -->
+                <div class="flex items-center px-4">
+                    <img src="public/assets/logo.svg" alt="Baytech Logo" style="
+                                height: 40px;
+                                width: auto;
+                                border-radius: 50%;
+                            " />
+                    <a href="#home" class="ml-2 text-lg font-bold text-primary"
+                        style="font-family: 'Clash Display', sans-serif">Baytech</a>
+                </div>
+
+                <!-- Hamburger Menu for Mobile -->
+                <div class="flex items-center px-4">
+                    <button id="hamburger" name="hamburger" type="button" class="absolute right-4 block lg:hidden">
+                        <span class="hamburger-line origin-top-left transition duration-300 ease-in-out"></span>
+                        <span class="hamburger-line transition duration-300 ease-in-out"></span>
+                        <span class="hamburger-line origin-bottom-left transition duration-300 ease-in-out"></span>
+                    </button>
+                    <!-- Navigation Menu -->
+                    <nav id="nav-menu"
+                        class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg dark:bg-dark dark:shadow-slate-500 lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none lg:dark:bg-transparent">
+                        <ul class="block lg:flex">
+                            <!-- Navigation Links -->
+                            <li class="group">
+                                <a href="#home"
+                                    class="nav-link mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Home</a>
+                            </li>
+                            <li class="group">
+                                <a href="#about"
+                                    class="nav-link mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">About</a>
+                            </li>
+                            <li class="group">
+                                <a href="#portfolio"
+                                    class="nav-link mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Portfolio</a>
+                            </li>
+                            <li class="group">
+                                <a href="#techStack"
+                                    class="nav-link mx-8 flex whitespace-nowrap py-2 text-base text-dark group-hover:text-primary dark:text-white">Tech
+                                    Stack</a>
+                            </li>
+                            <li class="group">
+                                <a href="#blog"
+                                    class="nav-link mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Blog</a>
+                            </li>
+                            <li class="group">
+                                <a href="#contact"
+                                    class="nav-link mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Contact</a>
+                            </li>
+
+                            <!-- Dark Mode Toggle -->
+                            <li class="mt-3 flex items-center pl-8 lg:mt-0">
+                                <div class="flex items-center">
+                                    <!-- Icon Matahari (Light Mode) -->
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="mr-2 h-5 w-5 text-black dark:text-slate-500" viewBox="0 0 24 24"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="5" />
+                                        <path
+                                            d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+                                    </svg>
+
+                                    <!-- Toggle Switch -->
+                                    <input type="checkbox" class="hidden" id="dark-toggle" />
+                                    <label for="dark-toggle">
+                                        <div
+                                            class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1">
+                                            <div
+                                                class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-300 ease-in-out">
+                                            </div>
+                                        </div>
+                                    </label>
+
+                                    <!-- Icon Bulan (Dark Mode) -->
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="ml-2 h-5 w-5 text-slate-500 dark:fill-white dark:text-white"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" fill="none">
+                                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                                    </svg>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Hero Section Start -->
+    <section id="home" class="pt-32 pb-32 dark:bg-dark">
+        <div class="container">
+            <div class="mt-[-64px] flex flex-col-reverse flex-wrap lg:mt-0 lg:flex-row lg:flex-nowrap">
+                <div class="w-full self-center px-4 lg:w-1/2" data-aos="fade-right">
+                    <h1 class="text-base font-semibold text-primary md:text-xl">
+                        Hello Everyone 👋, It's Me
+                        <span
+                            class="glitch mt-1 block text-4xl font-bold text-dark dark:text-white lg:text-5xl leading-relaxed tracking-wide"
+                            style="font-family: 'Clash Display', sans-serif; word-spacing: 4px;">Achmad Bayu Albait
+                            Alfatich, S.Kom</span>
+                    </h1>
+
+                    <h2 class="mb-5 text-lg font-medium text-secondary lg:text-2xl">
+                        And I'm a
+                        <span id="typed-text" class="text-primary dark:text-primary"
+                            style="font-family: 'Clash Display', sans-serif"></span>
+                    </h2>
+
+                    <p class="mb-10 font-medium leading-relaxed text-secondary">
+                        Experienced in digital
+                        <span class="font-bold text-dark dark:text-white">interface design</span>
+                        and
+                        <span class="font-bold text-dark dark:text-white">web development</span>
+                        with a focus on optimal user experience
+                    </p>
+
+                    <a href="public/file/CV_Achmad Bayu A.pdf"
+                        class="relative overflow-hidden rounded-full border-2 border-primary bg-transparent py-3 px-8 text-base font-semibold text-primary transition-all duration-500 ease-in-out before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-tr before:from-[#14B8A6] before:to-[#0E7490] before:opacity-0 before:transition-opacity before:duration-500 after:absolute after:inset-0 after:rounded-full after:border-2 after:border-white/50 after:opacity-0 after:transition-opacity after:duration-500 hover:scale-105 hover:text-white hover:shadow-lg hover:before:opacity-100 hover:after:opacity-100"
+                        target="_blank">
+                        <span class="relative z-10">Download CV</span>
+                    </a>
+
+                    <a href="#contact"
+                        class="ml-2 rounded-full bg-primary py-3 px-8 text-base font-semibold text-white transition-all duration-500 ease-in-out hover:scale-105 hover:opacity-80 hover:shadow-lg">Hire
+                        Me</a>
+                </div>
+
+                <!-- Kontainer Utama -->
+                <div class="flex w-full items-center justify-center px-4 lg:w-1/2" data-aos="fade-left">
+                    <!-- Kontainer Background + Foto -->
+                    <div class="relative flex aspect-square w-full max-w-lg items-center justify-center">
+                        <!-- Background SVG -->
+                        <svg class="absolute h-full w-full" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="#14B8A6"
+                                d="M40.1,-56.7C53.1,-54.1,65.6,-44.9,71,-32.5C76.4,-20.2,74.8,-4.9,71.9,9.8C69,24.5,64.8,38.5,56.7,50.7C48.6,62.8,36.5,73.1,22.3,78.6C8,84.1,-8.5,84.7,-19.9,77.1C-31.3,69.5,-37.5,53.7,-46,41.3C-54.4,28.9,-65,19.9,-70.2,7.8C-75.5,-4.2,-75.4,-19.3,-71.5,-34.6C-67.6,-50,-59.9,-65.7,-47.4,-68.5C-34.8,-71.3,-17.4,-61.3,-1.9,-58.3C13.6,-55.3,27.1,-59.3,40.1,-56.7Z"
+                                transform="translate(100 100)" />
+                        </svg>
+
+                        <!-- Foto -->
+                        <div class="relative flex aspect-[2/3] w-1/2 items-center justify-center">
+                            <img src="public/assets/img/header.png" alt="Achmad Bayu A"
+                                class="mb-20 ml-2 h-full w-full object-cover object-center" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- About Section Start -->
+    <section id="about" class="relative justify-center dark:bg-dark lg:pt-2">
+        <div class="container mx-auto px-4">
+            <!-- Desktop Layout About Me -->
+            <div class="flex flex-col gap-6 py-16 px-4 md:flex-row md:py-8 lg:py-0" data-aos="fade-right">
+                <!-- Kartu 1 (Gambar) -->
+                <div
+                    class="group relative h-auto w-full overflow-hidden rounded-3xl bg-white shadow-2xl md:h-[400px] md:w-[420px]">
+                    <div class="relative flex h-full w-full items-center justify-center">
+                        <img src="public/assets/img/about1.jpeg" alt="Profile"
+                            class="h-[400px] w-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-105" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/80 opacity-90">
+                        </div>
+                        <div
+                            class="absolute bottom-0 left-1/2 w-full -translate-x-1/2 translate-y-10 transform rounded-t-2xl bg-black/40 py-4 text-center opacity-0 backdrop-blur-lg transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                            <p class="p-4 text-left text-xl font-bold text-white">
+                                Public Speaking Mastery Training
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About Me (Teks) -->
+                <div class="w-full md:mr-auto md:w-1/2 md:pt-8 md:text-left">
+                    <h4 class="mb-3 text-lg font-bold uppercase text-primary">
+                        About Me
+                    </h4>
+                    <h2 class="mb-5 text-3xl font-bold text-dark dark:text-white md:text-2xl lg:text-3xl">
+                        Designing Interfaces & Developing Websites
+                    </h2>
+                    <p class="max-w-xl text-base font-medium text-secondary md:text-lg">
+                        I am a UI/UX Designer and Software Engineer
+                        dedicated to crafting intuitive, visually appealing,
+                        and responsive interfaces. With experience in
+                        digital product design, web development, and quality
+                        assurance, I strive to enhance user experience,
+                        optimize system efficiency, and ensure high product
+                        quality.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Bagian Let's Connect dan Kartu Gambar -->
+            <div class="flex flex-col-reverse flex-nowrap gap-6 py-2 px-4 pb-32 md:flex-row lg:flex-row"
+                data-aos="fade-left">
+                <!-- Let's Connect -->
+                <div class="w-full md:ml-auto md:w-1/2 md:pt-8 md:text-left">
+                    <h3 class="mb-4 text-2xl font-semibold text-dark dark:text-white md:text-3xl">
+                        <span class="text-primary">Let's</span> Connect
+                    </h3>
+                    <p class="mb-6 text-base font-medium text-secondary md:text-lg">
+                        Stay connected with me through social media! Follow
+                        my latest updates, projects, and insights to stay
+                        informed about my work. Let's connect, collaborate,
+                        and grow together.
+                    </p>
+                    <div class="flex items-center justify-start space-x-3">
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/baytech.ux/" target="_blank"
+                            class="flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                            <img src="public/assets/icons/instagram.svg" alt="Instagram"
+                                class="w-5 h-5 object-cover grayscale hover:grayscale-0 transition duration-300" />
+                        </a>
+
+                        <!-- Linkedin -->
+                        <a href="https://www.linkedin.com/in/achmadbayu-al/" target="_blank"
+                            class="flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                            <img src="public/assets/icons/linkedin.svg" alt="Linkedin"
+                                class="w-5 h-5 object-cover grayscale hover:grayscale-0 transition duration-300" />
+                        </a>
+
+                        <!-- Github -->
+                        <a href="https://github.com/yubayuu1" target="_blank"
+                            class="flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                            <img src="public/assets/icons/github.svg" alt="Github"
+                                class="w-5 h-5 object-cover grayscale hover:grayscale-0 transition duration-300 dark:bg-white rounded-full" />
+                        </a>
+
+                        <!-- Dribbble -->
+                        <a href="https://dribbble.com/BayuAL/" target="_blank"
+                            class="flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                            <img src="public/assets/icons/dribble.svg" alt="Dribble"
+                                class="w-5 h-5 object-cover grayscale hover:grayscale-0 transition duration-300" />
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Kartu Gambar -->
+                <div
+                    class="group relative h-auto w-full overflow-hidden rounded-3xl bg-white shadow-2xl md:h-[400px] md:w-[420px]">
+                    <div class="relative h-full w-full">
+                        <img src="public/assets/img/about2.jpeg" alt="Profile"
+                            class="h-full w-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-105" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/80 opacity-90">
+                        </div>
+                        <div
+                            class="absolute bottom-0 left-1/2 w-full -translate-x-1/2 translate-y-10 transform rounded-t-2xl bg-black/40 py-4 text-center opacity-0 backdrop-blur-lg transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                            <p class="p-4 text-left text-xl font-bold text-white">
+                                Creative Content Masterclass
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Akhir Container -->
+        </div>
+
+        <!-- Parallax Background Start -->
+        <section class="jarallax relative flex h-[400px] items-center justify-center overflow-hidden bg-black"
+            data-jarallax data-speed="0.3">
+            <!-- Gambar Parallax -->
+            <img class="jarallax-img h-auto w-full object-cover" src="public/assets/img/parallax1.jpg"
+                alt="Parallax Image" />
+            <!-- Konten Quote -->
+            <blockquote class="relative z-10 max-w-2xl px-8 text-center text-white drop-shadow-xl" data-aos="zoom-out"
+                style="
+                    font-family: 'Clash Display', sans-serif;
+                    font-size: 2rem;
+                    font-weight: 600;
+                ">
+                <!-- Ikon Kutipan -->
+                <svg class="mx-auto mb-4 h-10 w-10 text-gray-200" fill="currentColor" viewBox="0 0 32 32">
+                    <path
+                        d="M10.907 14.857c-1.067 0-1.899 0.214-2.494 0.643-0.597 0.429-1.021 1.018-1.273 1.765-0.251 0.75-0.376 1.536-0.376 2.361v0.321c0 0.286 0.018 0.607 0.054 0.964 0.036 0.357 0.054 0.607 0.054 0.75 0 0.214-0.089 0.393-0.268 0.536-0.179 0.143-0.339 0.214-0.482 0.214h-1.214c-0.214 0-0.393-0.071-0.536-0.214-0.143-0.143-0.214-0.321-0.214-0.536v-0.143c0-1.214 0.161-2.357 0.482-3.429 0.321-1.071 0.768-2.018 1.339-2.839 0.571-0.821 1.25-1.464 2.036-1.929 0.786-0.464 1.696-0.696 2.732-0.696 0.429 0 0.839 0.071 1.232 0.214 0.393 0.143 0.679 0.339 0.857 0.589 0.179 0.25 0.268 0.536 0.268 0.857 0 0.214-0.089 0.429-0.268 0.643-0.179 0.214-0.411 0.321-0.696 0.321-0.214 0-0.429-0.036-0.643-0.107-0.214-0.071-0.393-0.143-0.536-0.214-0.143-0.071-0.286-0.107-0.429-0.107zM22.036 14.857c-1.071 0-1.911 0.214-2.518 0.643-0.607 0.429-1.054 1.018-1.339 1.768-0.286 0.75-0.429 1.536-0.429 2.357v0.321c0 0.286 0.018 0.607 0.054 0.964 0.036 0.357 0.054 0.607 0.054 0.75 0 0.214-0.071 0.393-0.214 0.536-0.143 0.143-0.321 0.214-0.536 0.214h-1.214c-0.214 0-0.393-0.071-0.536-0.214-0.143-0.143-0.214-0.321-0.214-0.536v-0.143c0-1.214 0.161-2.357 0.482-3.429 0.321-1.071 0.768-2.018 1.339-2.839 0.571-0.821 1.25-1.464 2.036-1.929 0.786-0.464 1.696-0.696 2.732-0.696 0.429 0 0.839 0.071 1.232 0.214 0.393 0.143 0.679 0.339 0.857 0.589 0.179 0.25 0.268 0.536 0.268 0.857 0 0.214-0.089 0.429-0.268 0.643-0.179 0.214-0.411 0.321-0.696 0.321-0.214 0-0.429-0.036-0.643-0.107-0.214-0.071-0.393-0.143-0.536-0.214-0.143-0.071-0.286-0.107-0.429-0.107z" />
+                </svg>
+
+                <!-- Teks Quote -->
+                <p class="leading-tight">
+                    First, solve the problem. Then, write the code
+                </p>
+            </blockquote>
+        </section>
+        <!-- Parallax Background End -->
+
+        <!-- Certificates-->
+        <div id="certificates-container" class="container mx-auto mt-32 px-6 md:px-12">
+            <!-- Judul & Deskripsi Section -->
+            <div class="w-full px-4">
+                <div class="mx-auto mb-16 max-w-2xl text-center" data-aos="fade-down">
+                    <!-- Judul Utama -->
+                    <h2 class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl leading-relaxed text-center tracking-wide"
+                        style="font-family: 'Clash Display', sans-serif; word-spacing: 4px;">
+                        <span class="text-primary">Certified</span> IT Expertise
+                    </h2>
+                    <!-- Deskripsi Section -->
+                    <p class="text-md font-medium leading-relaxed text-secondary md:text-lg">
+                        This page showcases my latest information technology certifications, highlighting my competence
+                        and commitment to continuous growth. Each certification reflects my achievements and expertise
+                        in the field.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Certificates Grid -->
+            <div class="grid grid-cols-1 gap-8 px-4 md:grid-cols-2 lg:grid-cols-3 xl:mx-auto xl:w-10/12">
+                <!-- Certificates Item #1 -->
+                <div class="certificates-card group relative flex flex-col h-full rounded-xl bg-white shadow-lg transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-xl dark:bg-slate-800"
+                    data-aos="zoom-in-right">
+
+                    <!-- Gambar Certificates -->
+                    <div class="w-full h-full cursor-pointer overflow-hidden flex-shrink-0">
+                        <img src="public/assets/certificates/certif1.png" alt="Certificate Image"
+                            class="w-full h-full object-cover object-center"
+                            onclick="openPopup('public/assets/certificates/certif1.png')" />
+                    </div>
+
+                    <!-- Overlay Blur dengan Logo Teknologi -->
+                    <div
+                        class="absolute bottom-0 left-0 right-0 flex h-[132px] translate-y-10 items-center justify-center bg-white/30 opacity-0 backdrop-blur-md transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 z-20">
+                        <!-- Figma Icon -->
+                        <div
+                            class="flex h-14 w-14 translate-y-5 items-center justify-center rounded-full bg-white opacity-0 shadow-lg transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                            <img src="public/assets/icons/figma.svg" alt="Figma" class="h-8 w-8" />
+                        </div>
+                    </div>
+
+                    <!-- Konten Item (Caption) -->
+                    <div
+                        class="flex flex-col bg-white p-4 shadow-lg transition-all duration-500 dark:bg-slate-800 dark:hover:bg-gray-700 z-10 h-auto min-h-[200px]">
+                        <h3 class="mb-3 text-xl font-semibold text-dark dark:text-white">
+                            Sekolah UI/UX
+                        </h3>
+                        <p class="text-base font-medium leading-relaxed text-secondary">
+                            In this bootcamp, I was taught fundamental theories using Figma as a tool
+                        </p>
+                    </div>
+                </div>
+                <!-- Akhir Certificates Item #1-->
+
+                <!-- Certificates Item #2 -->
+                <div class="certificates-card group relative flex flex-col h-full rounded-xl bg-white shadow-lg transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-xl dark:bg-slate-800"
+                    data-aos="zoom-in">
+
+                    <!-- Gambar Certificates -->
+                    <div class="w-full h-full cursor-pointer overflow-hidden flex-shrink-0">
+                        <img src="public/assets/certificates/certif2.png" alt="Certificate Image"
+                            class="w-full h-full object-cover object-center"
+                            onclick="openPopup('public/assets/certificates/certif2.png')" />
+                    </div>
+
+                    <!-- Overlay Blur dengan Logo Teknologi -->
+                    <div
+                        class="absolute bottom-0 left-0 right-0 flex h-[132px] translate-y-10 items-center justify-center bg-white/30 opacity-0 backdrop-blur-md transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 z-20">
+                        <div
+                            class="flex h-14 w-14 translate-y-5 items-center justify-center rounded-full bg-white opacity-0 shadow-lg transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                            <img src="public/assets/icons/virtualbox.svg" alt="Virtualbox" class="h-8 w-8" />
+                        </div>
+
+                        <div
+                            class="flex ml-2 h-14 w-14 translate-y-5 items-center justify-center rounded-full bg-white opacity-0 shadow-lg transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                            <img src="public/assets/icons/kalilinux.svg" alt="Figma" class="h-8 w-8" />
+                        </div>
+                    </div>
+
+                    <!-- Konten Item (Caption) -->
+                    <div
+                        class="flex flex-col bg-white p-4 shadow-lg transition-all duration-500 dark:bg-slate-800 dark:hover:bg-gray-700 z-10 h-auto min-h-[200px]">
+                        <h3 class="mb-3 text-xl font-semibold text-dark dark:text-white">
+                            IT Security
+                        </h3>
+                        <p class="text-base font-medium leading-relaxed text-secondary">
+                            In this class, I was taught the fundamental theories of cybersecurity in depth
+                        </p>
+                    </div>
+                </div>
+                <!-- Akhir Certificates Item #2-->
+
+                <!-- Certificates Item #3 -->
+                <div class="certificates-card group relative flex flex-col h-full rounded-xl bg-white shadow-lg transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-xl dark:bg-slate-800"
+                    data-aos="zoom-in-left">
+
+                    <!-- Gambar Certificates -->
+                    <div class="w-full h-full cursor-pointer overflow-hidden flex-shrink-0">
+                        <img src="public/assets/certificates/certif3.jpg" alt="Certificate Image"
+                            class="w-full h-full object-cover object-center"
+                            onclick="openPopup('public/assets/certificates/certif3.jpg')" />
+                    </div>
+
+                    <!-- Overlay Blur dengan Logo Teknologi -->
+                    <div
+                        class="absolute bottom-0 left-0 right-0 flex h-[132px] translate-y-10 items-center justify-center bg-white/30 opacity-0 backdrop-blur-md transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 z-20">
+                        <div
+                            class="flex h-14 w-14 translate-y-5 items-center justify-center rounded-full bg-white opacity-0 shadow-lg transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                            <img src="public/assets/icons/figma.svg" alt="Figma" class="h-8 w-8" />
+                        </div>
+                    </div>
+
+                    <!-- Konten Item (Caption) -->
+                    <div
+                        class="flex flex-col bg-white p-4 shadow-lg transition-all duration-500 dark:bg-slate-800 dark:hover:bg-gray-700 z-10 h-auto min-h-[200px]">
+                        <h3 class="mb-3 text-xl font-semibold text-dark dark:text-white">
+                            Summer Program UI/UX
+                        </h3>
+                        <p class="text-base font-medium leading-relaxed text-secondary">
+                            In this bootcamp, I led my team and gained hands-on experience with fundamental UI/UX
+                            design principles
+                        </p>
+                    </div>
+                </div>
+                <!-- Akhir Certificates Item #3-->
+
+                <!-- Certificates Item #4 -->
+                <div class="certificates-card group relative flex flex-col h-full rounded-xl bg-white shadow-lg transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-xl dark:bg-slate-800"
+                    data-aos="zoom-in-right">
+
+                    <!-- Gambar Certificates -->
+                    <div class="w-full h-full cursor-pointer overflow-hidden flex-shrink-0">
+                        <img src="public/assets/certificates/certif4.png" alt="Certificate Image"
+                            class="w-full h-full object-cover object-center"
+                            onclick="openPopup('public/assets/certificates/certif4.png')" />
+                    </div>
+
+                    <!-- Overlay Blur dengan Logo Teknologi -->
+                    <div
+                        class="absolute bottom-0 left-0 right-0 flex h-[132px] translate-y-10 items-center justify-center bg-white/30 opacity-0 backdrop-blur-md transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 z-20">
+                        <div
+                            class="flex h-14 w-14 translate-y-5 items-center justify-center rounded-full bg-white opacity-0 shadow-lg transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                            <img src="public/assets/icons/excel.svg" alt="Excel" class="h-8 w-8" />
+                        </div>
+                    </div>
+
+                    <!-- Konten Item (Caption) -->
+                    <div
+                        class="flex flex-col bg-white p-4 shadow-lg transition-all duration-500 dark:bg-slate-800 dark:hover:bg-gray-700 z-10 h-auto min-h-[200px]">
+                        <h3 class="mb-3 text-xl font-semibold text-dark dark:text-white">
+                            Microsoft Excel Course
+                        </h3>
+                        <p class="text-base font-medium leading-relaxed text-secondary">
+                            In this course, I was taught various formulas that can be used to simplify data processing
+                            for me
+                        </p>
+                    </div>
+                </div>
+                <!-- Akhir Certificates Item #4-->
+
+                <!-- Certificates Item #5 -->
+                <div class="certificates-card group relative flex flex-col h-full rounded-xl bg-white shadow-lg transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-xl dark:bg-slate-800"
+                    data-aos="zoom-in">
+
+                    <!-- Gambar Certificates -->
+                    <div class="w-full h-full cursor-pointer overflow-hidden flex-shrink-0">
+                        <img src="public/assets/certificates/certif5.png" alt="Certificate Image"
+                            class="w-full h-full object-cover object-center"
+                            onclick="openPopup('public/assets/certificates/certif5.png')" />
+                    </div>
+
+                    <!-- Overlay Blur dengan Logo Teknologi -->
+                    <div
+                        class="absolute bottom-0 left-0 right-0 flex h-[132px] translate-y-10 items-center justify-center bg-white/30 opacity-0 backdrop-blur-md transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 z-20">
+                        <div
+                            class="flex h-14 w-14 translate-y-5 items-center justify-center rounded-full bg-white opacity-0 shadow-lg transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                            <img src="public/assets/icons/autopsy.svg" alt="Autopsy" class="h-8 w-8" />
+                        </div>
+
+                        <div
+                            class="flex ml-2 h-14 w-14 translate-y-5 items-center justify-center rounded-full bg-white opacity-0 shadow-lg transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                            <img src="public/assets/icons/wireshark.svg" alt="Figma" class="h-8 w-8" />
+                        </div>
+                    </div>
+
+                    <!-- Konten Item (Caption) -->
+                    <div
+                        class="flex flex-col bg-white p-4 shadow-lg transition-all duration-500 dark:bg-slate-800 dark:hover:bg-gray-700 z-10 h-auto min-h-[200px]">
+                        <h3 class="mb-3 text-xl font-semibold text-dark dark:text-white">
+                            Digital Forensic
+                        </h3>
+                        <p class="text-base font-medium leading-relaxed text-secondary">
+                            In this class, I learned the core theories of digital forensics along with its practical
+                            applications
+                        </p>
+                    </div>
+                </div>
+                <!-- Akhir Certificates Item #5-->
+
+                <!-- Certificates Item #6 -->
+                <div class="certificates-card group relative flex flex-col h-full rounded-xl bg-white shadow-lg transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-xl dark:bg-slate-800"
+                    data-aos="zoom-in-left">
+
+                    <!-- Gambar Certificates -->
+                    <div class="w-full h-full cursor-pointer overflow-hidden flex-shrink-0">
+                        <img src="public/assets/certificates/certif6.jpg" alt="Certificate Image"
+                            class="w-full h-full object-cover object-center"
+                            onclick="openPopup('public/assets/certificates/certif6.jpg')" />
+                    </div>
+
+                    <!-- Overlay Blur dengan Logo Teknologi -->
+                    <div
+                        class="absolute bottom-0 left-0 right-0 flex h-[132px] translate-y-10 items-center justify-center bg-white/30 opacity-0 backdrop-blur-md transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 z-20">
+                        <div
+                            class="flex h-14 w-14 translate-y-5 items-center justify-center rounded-full bg-white opacity-0 shadow-lg transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                            <img src="public/assets/icons/kalilinux.svg" alt="Kalilinux" class="h-8 w-8" />
+                        </div>
+                    </div>
+
+                    <!-- Konten Item (Caption) -->
+                    <div
+                        class="flex flex-col bg-white p-4 shadow-lg transition-all duration-500 dark:bg-slate-800 dark:hover:bg-gray-700 z-10 h-auto min-h-[200px]">
+                        <h3 class="mb-3 text-xl font-semibold text-dark dark:text-white">
+                            Cyber Security
+                        </h3>
+                        <p class="text-base font-medium leading-relaxed text-secondary">
+                            I took a Cybersecurity course that combined theory and hands-on practice through e-learning
+                        </p>
+                    </div>
+                </div>
+                <!-- Akhir Certificates Item #6-->
+
+                <!-- Certificates Item #7 -->
+                <div class="certificates-card group relative flex flex-col h-full rounded-xl bg-white shadow-lg transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-xl dark:bg-slate-800 display-none"
+                    data-aos="zoom-in-right">
+
+                    <!-- Gambar Certificates -->
+                    <div class="w-full h-full cursor-pointer overflow-hidden flex-shrink-0">
+                        <img src="public/assets/certificates/certif7.jpg" alt="Certificate Image"
+                            class="w-full h-full object-cover object-center"
+                            onclick="openPopup('public/assets/certificates/certif7.jpg')" />
+                    </div>
+
+                    <!-- Overlay Blur dengan Logo Teknologi -->
+                    <div
+                        class="absolute bottom-0 left-0 right-0 flex h-[132px] translate-y-10 items-center justify-center bg-white/30 opacity-0 backdrop-blur-md transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 z-20">
+                        <div
+                            class="flex h-14 w-14 translate-y-5 items-center justify-center rounded-full bg-white opacity-0 shadow-lg transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                            <img src="public/assets/icons/excel.svg" alt="Excel" class="h-8 w-8" />
+                        </div>
+                    </div>
+
+                    <!-- Konten Item (Caption) -->
+                    <div
+                        class="flex flex-col bg-white p-4 shadow-lg transition-all duration-500 dark:bg-slate-800 dark:hover:bg-gray-700 z-10 h-auto min-h-[200px]">
+                        <h3 class="mb-3 text-xl font-semibold text-dark dark:text-white">
+                            Software Quality Assurance
+                        </h3>
+                        <p class="text-base font-medium leading-relaxed text-secondary">
+                            I attended a Software Quality Assurance class, sharpening my testing skills and attention to
+                            detail
+                        </p>
+                    </div>
+                </div>
+                <!-- Akhir Certificates Item #7-->
+
+                <!-- Certificates Item #8 -->
+                <div class="certificates-card group relative flex flex-col h-full rounded-xl bg-white shadow-lg transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-xl dark:bg-slate-800 display-none"
+                    data-aos="zoom-in">
+
+                    <!-- Gambar Certificates -->
+                    <div class="w-full h-full cursor-pointer overflow-hidden flex-shrink-0">
+                        <img src="public/assets/certificates/certif8.png" alt="Certificate Image"
+                            class="w-full h-full object-cover object-center"
+                            onclick="openPopup('public/assets/certificates/certif8.png')" />
+                    </div>
+
+                    <!-- Overlay Blur dengan Logo Teknologi -->
+                    <div
+                        class="absolute bottom-0 left-0 right-0 flex h-[132px] translate-y-10 items-center justify-center bg-white/30 opacity-0 backdrop-blur-md transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 z-20">
+                        <div
+                            class="flex h-14 w-14 translate-y-5 items-center justify-center rounded-full bg-white opacity-0 shadow-lg transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                            <img src="public/assets/icons/kalilinux.svg" alt="Kalilinux" class="h-8 w-8" />
+                        </div>
+                    </div>
+
+                    <!-- Konten Item (Caption) -->
+                    <div
+                        class="flex flex-col bg-white p-4 shadow-lg transition-all duration-500 dark:bg-slate-800 dark:hover:bg-gray-700 z-10 h-auto min-h-[200px]">
+                        <h3 class="mb-3 text-xl font-semibold text-dark dark:text-white">
+                            Pentesting
+                        </h3>
+                        <p class="text-base font-medium leading-relaxed text-secondary">
+                            I completed a cybersecurity course focused on penetration testing, strengthening my security
+                            skills
+                        </p>
+                    </div>
+                </div>
+                <!-- Akhir Certificates Item #8-->
+
+                <!-- Certificates Item #9 -->
+                <div class="certificates-card group relative flex flex-col h-full rounded-xl bg-white shadow-lg transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-xl dark:bg-slate-800 display-none"
+                    data-aos="zoom-in-left">
+
+                    <!-- Gambar Certificates -->
+                    <div class="w-full h-full cursor-pointer overflow-hidden flex-shrink-0">
+                        <img src="public/assets/certificates/certif9.png" alt="Certificate Image"
+                            class="w-full h-full object-cover object-center"
+                            onclick="openPopup('public/assets/certificates/certif9.png')" />
+                    </div>
+
+                    <!-- Overlay Blur dengan Logo Teknologi -->
+                    <div
+                        class="absolute bottom-0 left-0 right-0 flex h-[132px] translate-y-10 items-center justify-center bg-white/30 opacity-0 backdrop-blur-md transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 z-20">
+                        <div
+                            class="flex h-14 w-14 translate-y-5 items-center justify-center rounded-full bg-white opacity-0 shadow-lg transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                            <img src="public/assets/icons/figma.svg" alt="Figma" class="h-8 w-8" />
+                        </div>
+                    </div>
+
+                    <!-- Konten Item (Caption) -->
+                    <div
+                        class="flex flex-col bg-white p-4 shadow-lg transition-all duration-500 dark:bg-slate-800 dark:hover:bg-gray-700 z-10 h-auto min-h-[200px]">
+                        <h3 class="mb-3 text-xl font-semibold text-dark dark:text-white">
+                            UI/UX Design Course
+                        </h3>
+                        <p class="text-base font-medium leading-relaxed text-secondary">
+                            I enrolled in a UI/UX Design Course that pushed my creativity and improved my technical
+                            skills
+                        </p>
+                    </div>
+                </div>
+                <!-- Akhir Certificates Item #9-->
+
+                <!-- Popup Preview Gambar -->
+                <div id="popup"
+                    class="fixed inset-0 z-50 hidden items-center justify-center bg-black/30 backdrop-blur-md transition-opacity duration-300"
+                    onclick="closePopup(event)">
+                    <!-- Popup Content -->
+                    <div
+                        class="popup-content relative flex w-11/12 max-w-lg scale-95 transform flex-col items-center rounded-xl bg-white p-6 shadow-2xl transition-transform duration-300 md:max-w-2xl">
+                        <!-- Gambar -->
+                        <img id="popup-img" class="max-h-screen w-full rounded-lg object-contain shadow-lg"
+                            alt="Popup Image" />
+                        <!-- Tombol Close -->
+                        <button id="close-btn"
+                            class="my-4 rounded-lg bg-red-500 px-4 py-2 text-base font-bold text-black transition-all duration-300 hover:scale-105 hover:bg-red-700 hover:text-white md:px-4 md:text-2xl">
+                            ❌ Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Akhir Certificates Grid -->
+
+            <!-- Tombol Load More Certificates -->
+            <div class="text-center mt-12" data-aos="fade-up">
+                <button id="load-more-certif-btn"
+                    class="px-6 py-3 bg-primary text-white font-semibold rounded-full hover:opacity-60 transition">
+                    Load More
+                </button>
+            </div>
+        </div>
+
+        <!-- Wave -->
+        <svg class="mt-32 fill-[#F1F5F9] dark:fill-[#1E293B]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"
+            preserveAspectRatio="none" width="100%" height="120">
+            <path fill-opacity="1"
+                d="M0,96L30,101.3C60,107,120,117,180,149.3C240,181,300,235,360,224C420,213,480,139,540,117.3C600,96,660,128,720,122.7C780,117,840,75,900,69.3C960,64,1020,96,1080,128C1140,160,1200,192,1260,197.3C1320,203,1380,181,1410,170.7L1440,160L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z" />
+        </svg>
+    </section>
+    <!-- About Section End -->
+
+    <!-- Portfolio Section Start -->
+    <section id="portfolio" class="-mb-8 bg-slate-100 pt-24 dark:bg-slate-800">
+        <!-- Container Utama -->
+        <div id="portfolio-container" class="container mx-auto px-6 md:px-12">
+            <!-- Judul & Deskripsi Section -->
+            <div class="w-full px-4">
+                <div class="mx-auto mb-16 max-w-2xl text-center" data-aos="fade-left">
+                    <!-- Subjudul Portfolio -->
+                    <h4 class="mb-2 text-lg font-semibold text-primary">
+                        Portfolio
+                    </h4>
+                    <!-- Judul Utama -->
+                    <h2 class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl leading-relaxed text-center tracking-wide"
+                        style="font-family: 'Clash Display', sans-seri; word-spacing: 4px;">
+                        Latest Projects
+                    </h2>
+                    <!-- Deskripsi Section -->
+                    <p class="text-md font-medium leading-relaxed text-secondary md:text-lg">
+                        This page showcases our latest projects in web
+                        development, UI/UX design, and quality assurance.
+                        Each project is designed with cutting-edge
+                        technology to deliver the best solutions for users.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="grid grid-cols-1 gap-8 px-4 md:grid-cols-2 xl:mx-auto xl:w-10/12">
+                <!-- Portfolio Item #1 -->
+                <div class="portfolio-card group relative flex flex-col h-full rounded-xl bg-white shadow-lg transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-xl dark:bg-dark"
+                    data-aos="zoom-in-right">
+                    <!-- Contoh Card/Gambar di Halaman -->
+                    <div class="w-full h-full cursor-pointer overflow-hidden flex-shrink-0">
+                        <img src="public/assets/portfolio/porto1.png" alt="Portfolio Image"
+                            class="object-cover object-center"
+                            onclick="openPopup('public/assets/portfolio/preview1.png')">
+                    </div>
+
+                    <!-- Overlay Blur dengan Logo Teknologi -->
+                    <div
+                        class="absolute bottom-0 left-0 right-0 flex h-[140px] translate-y-10 items-center justify-center bg-white/30 opacity-0 backdrop-blur-md transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 z-20">
+                        <div
+                            class="flex h-14 w-14 translate-y-5 items-center justify-center rounded-full bg-white opacity-0 shadow-lg transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                            <img src="public/assets/icons/figma.svg" alt="Figma" class="h-8 w-8" />
+                        </div>
+                    </div>
+
+                    <!-- Konten Item (Caption) -->
+                    <div
+                        class="flex flex-col bg-white p-4 shadow-lg transition-all duration-500 dark:bg-dark dark:hover:bg-slate-700 z-10 h-auto min-h-[200px]">
+                        <h3 class="mb-3 text-xl font-semibold text-dark dark:text-white">
+                            Muscle Camp
+                        </h3>
+                        <p class="text-base font-medium leading-relaxed text-secondary dark:text-gray-400">
+                            Elevate your training at Muscle Camp Gym, where unwavering determination meets powerful
+                            workouts for transforming your body, mind, and spirit.
+                        </p>
+                    </div>
+                </div>
+                <!-- Akhir Portfolio Item #1-->
+
+                <!-- Portfolio Item #2 -->
+                <div class="portfolio-card group relative flex flex-col h-full rounded-xl bg-white shadow-lg transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-xl dark:bg-dark"
+                    data-aos="zoom-in-left">
+                    <!-- Contoh Card/Gambar di Halaman -->
+                    <div class="w-full h-full cursor-pointer overflow-hidden flex-shrink-0">
+                        <img src="public/assets/portfolio/porto2.png" alt="Portfolio Image"
+                            class="object-cover object-center"
+                            onclick="openPopup('public/assets/portfolio/preview2.png')">
+                    </div>
+
+                    <!-- Overlay Blur dengan Logo Teknologi -->
+                    <div
+                        class="absolute bottom-0 left-0 right-0 flex h-[140px] translate-y-10 items-center justify-center bg-white/30 opacity-0 backdrop-blur-md transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 z-20">
+                        <div
+                            class="flex h-14 w-14 translate-y-5 items-center justify-center rounded-full bg-white opacity-0 shadow-lg transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                            <img src="public/assets/icons/figma.svg" alt="Figma" class="h-8 w-8" />
+                        </div>
+
+                        <div
+                            class="flex ml-2 h-14 w-14 translate-y-5 items-center justify-center rounded-full bg-white opacity-0 shadow-lg transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                            <img src="public/assets/icons/react.svg" alt="React" class="h-8 w-8" />
+                        </div>
+
+                        <div
+                            class="flex ml-2 h-14 w-14 translate-y-5 items-center justify-center rounded-full bg-white opacity-0 shadow-lg transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                            <img src="public/assets/icons/tailwind.svg" alt="Tailwind" class="h-8 w-8" />
+                        </div>
+                    </div>
+
+                    <!-- Konten Item (Caption) -->
+                    <div
+                        class="flex flex-col bg-white p-4 shadow-lg transition-all duration-500 dark:bg-dark dark:hover:bg-slate-700 z-10 h-auto min-h-[200px]">
+                        <h3 class="mb-3 text-xl font-semibold text-dark dark:text-white">
+                            Mafia Code Community
+                        </h3>
+                        <p class="text-base font-medium leading-relaxed text-secondary dark:text-gray-400">
+                            In this community, I serve as the leader of the UI/UX Design division, where I am
+                            responsible for creating and overseeing my team's performance
+                        </p>
+                    </div>
+                </div>
+                <!-- Akhir Portfolio Item #2-->
+
+                <!-- Portfolio Item #3 -->
+                <div class="portfolio-card group relative flex flex-col h-full rounded-xl bg-white shadow-lg transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-xl dark:bg-dark"
+                    data-aos="zoom-in-right">
+                    <!-- Contoh Card/Gambar di Halaman -->
+                    <div class="w-full h-full cursor-pointer overflow-hidden flex-shrink-0">
+                        <img src="public/assets/portfolio/porto3.png" alt="Portfolio Image"
+                            class="object-cover object-center"
+                            onclick="openPopup('public/assets/portfolio/preview3.png')">
+                    </div>
+
+                    <!-- Overlay Blur dengan Logo Teknologi -->
+                    <div
+                        class="absolute bottom-0 left-0 right-0 flex h-[140px] translate-y-10 items-center justify-center bg-white/30 opacity-0 backdrop-blur-md transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 z-20">
+                        <div
+                            class="flex h-14 w-14 translate-y-5 items-center justify-center rounded-full bg-white opacity-0 shadow-lg transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                            <img src="public/assets/icons/figma.svg" alt="Figma" class="h-8 w-8" />
+                        </div>
+                    </div>
+
+                    <!-- Konten Item (Caption) -->
+                    <div
+                        class="flex flex-col bg-white p-4 shadow-lg transition-all duration-500 dark:bg-dark dark:hover:bg-slate-700 z-10 h-auto min-h-[200px]">
+                        <h3 class="mb-3 text-xl font-semibold text-dark dark:text-white">
+                            Halofisio
+                        </h3>
+                        <p class="text-base font-medium leading-relaxed text-secondary dark:text-gray-400">
+                            This is my freelance project as a UI/UX designer. The project is themed around a
+                            physiotherapy application that I named Halofisio
+                        </p>
+                    </div>
+                </div>
+                <!-- Akhir Portfolio Item #3-->
+
+                <!-- Portfolio Item #4 -->
+                <div class="portfolio-card group relative flex flex-col h-full rounded-xl bg-white shadow-lg transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-xl dark:bg-dark"
+                    data-aos="zoom-in-left">
+                    <!-- Contoh Card/Gambar di Halaman -->
+                    <div class="w-full h-full cursor-pointer overflow-hidden flex-shrink-0">
+                        <img src="public/assets/portfolio/porto4.png" alt="Portfolio Image"
+                            class="object-cover object-center"
+                            onclick="openPopup('public/assets/portfolio/preview4.png')">
+                    </div>
+
+                    <!-- Overlay Blur dengan Logo Teknologi -->
+                    <div
+                        class="absolute bottom-0 left-0 right-0 flex h-[140px] translate-y-10 items-center justify-center bg-white/30 opacity-0 backdrop-blur-md transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 z-20">
+                        <div
+                            class="flex h-14 w-14 translate-y-5 items-center justify-center rounded-full bg-white opacity-0 shadow-lg transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                            <img src="public/assets/icons/figma.svg" alt="Figma" class="h-8 w-8" />
+                        </div>
+                    </div>
+
+                    <!-- Konten Item (Caption) -->
+                    <div
+                        class="flex flex-col bg-white p-4 shadow-lg transition-all duration-500 dark:bg-dark dark:hover:bg-slate-700 z-10 h-auto min-h-[200px]">
+                        <h3 class="mb-3 text-xl font-semibold text-dark dark:text-white">
+                            Discusspace
+                        </h3>
+                        <p class="text-base font-medium leading-relaxed text-secondary dark:text-gray-400">
+                            In this project, my team of three members and I created a coffeeshop website design that
+                            emphasizes a modern layout, and visually elements
+                        </p>
+                    </div>
+                </div>
+                <!-- Akhir Portfolio Item #4-->
+
+                <!-- Portfolio Item #5 -->
+                <div class="portfolio-card group relative flex flex-col h-full rounded-xl bg-white shadow-lg transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-xl dark:bg-dark display-hidden"
+                    data-aos="zoom-in-right">
+                    <!-- Contoh Card/Gambar di Halaman -->
+                    <div class="w-full h-full cursor-pointer overflow-hidden flex-shrink-0">
+                        <img src="public/assets/portfolio/porto5.png" alt="Portfolio Image"
+                            class="object-cover object-center"
+                            onclick="openPopup('public/assets/portfolio/preview5.png')">
+                    </div>
+
+                    <!-- Overlay Blur dengan Logo Teknologi -->
+                    <div
+                        class="absolute bottom-0 left-0 right-0 flex h-[140px] translate-y-10 items-center justify-center bg-white/30 opacity-0 backdrop-blur-md transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 z-20">
+                        <div
+                            class="flex h-14 w-14 translate-y-5 items-center justify-center rounded-full bg-white opacity-0 shadow-lg transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                            <img src="public/assets/icons/excel.svg" alt="Excel" class="h-8 w-8" />
+                        </div>
+                    </div>
+
+                    <!-- Konten Item (Caption) -->
+                    <div
+                        class="flex flex-col bg-white p-4 shadow-lg transition-all duration-500 dark:bg-dark dark:hover:bg-slate-700 z-10 h-auto min-h-[200px]">
+                        <h3 class="mb-3 text-xl font-semibold text-dark dark:text-white">
+                            QA Website BWA
+                        </h3>
+                        <p class="text-base font-medium leading-relaxed text-secondary dark:text-gray-400">
+                            I have completed an in-depth Quality Assurance course, gaining extensive insights and
+                            practical skills to ensure system quality
+                        </p>
+                    </div>
+                </div>
+                <!-- Akhir Portfolio Item #5-->
+
+                <!-- Portfolio Item #6 -->
+                <div class="portfolio-card group relative flex flex-col h-full rounded-xl bg-white shadow-lg transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-xl dark:bg-dark display-hidden"
+                    data-aos="zoom-in-left">
+                    <!-- Contoh Card/Gambar di Halaman -->
+                    <div class="w-full h-full cursor-pointer overflow-hidden flex-shrink-0">
+                        <img src="public/assets/portfolio/porto6.png" alt="Portfolio Image"
+                            class="object-cover object-center"
+                            onclick="openPopup('public/assets/portfolio/preview6.png')">
+                    </div>
+
+                    <!-- Overlay Blur dengan Logo Teknologi -->
+                    <div
+                        class="absolute bottom-0 left-0 right-0 flex h-[140px] translate-y-10 items-center justify-center bg-white/30 opacity-0 backdrop-blur-md transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 z-20">
+                        <div
+                            class="flex h-14 w-14 translate-y-5 items-center justify-center rounded-full bg-white opacity-0 shadow-lg transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                            <img src="public/assets/icons/figma.svg" alt="Figma" class="h-8 w-8" />
+                        </div>
+                    </div>
+
+                    <!-- Konten Item (Caption) -->
+                    <div
+                        class="flex flex-col bg-white p-4 shadow-lg transition-all duration-500 dark:bg-dark dark:hover:bg-slate-700 z-10 h-auto min-h-[200px]">
+                        <h3 class="mb-3 text-xl font-semibold text-dark dark:text-white">
+                            Mo Laundry
+                        </h3>
+                        <p class="text-base font-medium leading-relaxed text-secondary dark:text-gray-400">
+                            In the summer program project, I was entrusted as the team leader to guide my team in
+                            successfully completing the bootcamp summer program
+                        </p>
+                    </div>
+                </div>
+                <!-- Akhir Portfolio Item #6-->
+
+                <!-- Portfolio Item #7 -->
+                <div class="portfolio-card group relative flex flex-col h-full rounded-xl bg-white shadow-lg transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-xl dark:bg-dark display-hidden"
+                    data-aos="zoom-in-right">
+                    <!-- Contoh Card/Gambar di Halaman -->
+                    <div class="w-full h-full cursor-pointer overflow-hidden flex-shrink-0">
+                        <img src="public/assets/portfolio/porto7.png" alt="Portfolio Image"
+                            class="object-cover object-center"
+                            onclick="openPopup('public/assets/portfolio/preview7.png')">
+                    </div>
+
+                    <!-- Overlay Blur dengan Logo Teknologi -->
+                    <div
+                        class="absolute bottom-0 left-0 right-0 flex h-[140px] translate-y-10 items-center justify-center bg-white/30 opacity-0 backdrop-blur-md transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 z-20">
+                        <div
+                            class="flex h-14 w-14 translate-y-5 items-center justify-center rounded-full bg-white opacity-0 shadow-lg transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                            <img src="public/assets/icons/figma.svg" alt="Figma" class="h-8 w-8" />
+                        </div>
+                        <div
+                            class="flex ml-2 h-14 w-14 translate-y-5 items-center justify-center rounded-full bg-white opacity-0 shadow-lg transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                            <img src="public/assets/icons/codeigniter.svg" alt="Codeigniter" class="h-8 w-8" />
+                        </div>
+                        <div
+                            class="flex ml-2 h-14 w-14 translate-y-5 items-center justify-center rounded-full bg-white opacity-0 shadow-lg transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                            <img src="public/assets/icons/bootstrap.svg" alt="Bootstrap" class="h-8 w-8" />
+                        </div>
+                    </div>
+
+                    <!-- Konten Item (Caption) -->
+                    <div
+                        class="flex flex-col bg-white p-4 shadow-lg transition-all duration-500 dark:bg-dark dark:hover:bg-slate-700 z-10 h-auto min-h-[200px]">
+                        <h3 class="mb-3 text-xl font-semibold text-dark dark:text-white">
+                            Hospital System Redesign
+                        </h3>
+                        <p class="text-base font-medium leading-relaxed text-secondary dark:text-gray-400">
+                            I redesigned the Pharmacy Warehouse Information System at Siti Khodijah Hospital as part of
+                            my final thesis project to improve efficiency and management
+                        </p>
+                    </div>
+                </div>
+                <!-- Akhir Portfolio Item #7-->
+
+                <!-- Portfolio Item #8 -->
+                <div class="portfolio-card group relative flex flex-col h-full rounded-xl bg-white shadow-lg transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-xl dark:bg-dark display-hidden"
+                    data-aos="zoom-in-left">
+                    <!-- Contoh Card/Gambar di Halaman -->
+                    <div class="w-full h-full cursor-pointer overflow-hidden flex-shrink-0">
+                        <img src="public/assets/portfolio/porto8.png" alt="Portfolio Image"
+                            class="object-cover object-center"
+                            onclick="openPopup('public/assets/portfolio/preview8.png')">
+                    </div>
+
+                    <!-- Overlay Blur dengan Logo Teknologi -->
+                    <div
+                        class="absolute bottom-0 left-0 right-0 flex h-[140px] translate-y-10 items-center justify-center bg-white/30 opacity-0 backdrop-blur-md transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 z-20">
+                        <div
+                            class="flex h-14 w-14 translate-y-5 items-center justify-center rounded-full bg-white opacity-0 shadow-lg transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                            <img src="public/assets/icons/figma.svg" alt="Figma" class="h-8 w-8" />
+                        </div>
+                        <div
+                            class="flex ml-2 h-14 w-14 translate-y-5 items-center justify-center rounded-full bg-white opacity-0 shadow-lg transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                            <img src="public/assets/icons/laravel.svg" alt="Laravel" class="h-8 w-8" />
+                        </div>
+                        <div
+                            class="flex ml-2 h-14 w-14 translate-y-5 items-center justify-center rounded-full bg-white opacity-0 shadow-lg transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                            <img src="public/assets/icons/tailwind.svg" alt="Tailwind" class="h-8 w-8" />
+                        </div>
+                    </div>
+
+                    <!-- Konten Item (Caption) -->
+                    <div
+                        class="flex flex-col bg-white p-4 shadow-lg transition-all duration-500 dark:bg-dark dark:hover:bg-slate-700 z-10 h-auto min-h-[200px]">
+                        <h3 class="mb-3 text-xl font-semibold text-dark dark:text-white">
+                            Jobank
+                        </h3>
+                        <p class="text-base font-medium leading-relaxed text-secondary dark:text-gray-400">
+                            Jobank is an online platform that connects job seekers with potential employers, providing
+                            various job opportunities across different industries
+                        </p>
+                    </div>
+                </div>
+                <!-- Akhir Portfolio Item #8-->
+
+                <!-- Popup Preview Gambar -->
+                <div id="popup"
+                    class="fixed inset-0 z-50 hidden items-center justify-center bg-black/30 backdrop-blur-md transition-opacity duration-300"
+                    onclick="closePopup(event)">
+                    <!-- Popup Content -->
+                    <div
+                        class="popup-content relative flex w-11/12 max-w-lg scale-95 transform flex-col items-center rounded-xl bg-white p-6 shadow-2xl transition-transform duration-300 md:max-w-2xl">
+                        <!-- Gambar -->
+                        <img id="popup-img" class="max-h-screen w-full rounded-lg object-contain shadow-lg"
+                            alt="Popup Image" />
+                    </div>
+                    <!-- Tombol Close -->
+                    <button id="close-btn"
+                        class="my-4 rounded-lg bg-red-500 px-4 py-2 text-base font-bold text-black transition-all duration-300 hover:scale-105 hover:bg-red-700 hover:text-white md:px-4 md:text-2xl">❌
+                        Close</button>
+                </div>
+            </div>
+        </div>
+        <!-- Akhir Portfolio Grid -->
+        <!-- Tombol Load More -->
+        <div class="text-center mt-8" data-aos="fade-right">
+            <button id="loadMoreBtn"
+                class="px-6 py-3 bg-primary text-white font-semibold rounded-full hover:opacity-60 transition">
+                Load More
+            </button>
+        </div>
+        </div>
+        <!-- Akhir Container -->
+
+        <!-- Wave Separator -->
+        <svg class="mt-32 fill-[#1E293B] dark:fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"
+            preserveAspectRatio="none" width="100%" height="160">
+            <path fill-opacity="1"
+                d="M0,32L26.7,32C53.3,32,107,32,160,74.7C213.3,117,267,203,320,224C373.3,245,427,203,480,192C533.3,181,587,203,640,181.3C693.3,160,747,96,800,101.3C853.3,107,907,181,960,192C1013.3,203,1067,149,1120,106.7C1173.3,64,1227,32,1280,37.3C1333.3,43,1387,85,1413,106.7L1440,128L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z">
+            </path>
+        </svg>
+    </section>
+    <!-- Portfolio Section End -->
+
+    <!-- Tech Stack Section Start -->
+    <section id="techStack" class="-mb-8 bg-slate-800 pt-24 dark:bg-white">
+        <div class="container">
+            <div class="w-full px-4">
+                <div class="mx-auto mb-16 text-center" data-aos="flip-right">
+                    <h4 class="mb-2 text-lg font-semibold text-primary">
+                        Tech Stack
+                    </h4>
+                    <h2 class="mb-4 text-3xl font-bold text-white dark:text-dark sm:text-4xl lg:text-5xl leading-relaxed text-center tracking-wide"
+                        style="font-family: 'Clash Display', sans-serif; word-spacing: 4px;">
+                        Programming & Design Tools
+                    </h2>
+                    <p class="text-md mx-auto max-w-xl font-medium text-secondary md:text-lg">
+                        These are the programming and design tools I use to
+                        create efficient, user-friendly, and visually
+                        appealing digital experiences
+                    </p>
+                </div>
+            </div>
+
+            <div class="w-full px-8 py-10">
+                <div class="flex flex-wrap items-center justify-center gap-4">
+                    <!-- Figma Icon -->
+                    <a href="#" title="Figma"
+                        class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-4 xl:mx-4"
+                        data-aos="fade-down-right">
+                        <img src="public/assets/icons/figma.svg" alt="Figma" class="h-16 w-16 object-contain" />
+                    </a>
+
+                    <!-- Canva Icon -->
+                    <a href="#" title="Canva"
+                        class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-4 xl:mx-4"
+                        data-aos="fade-down">
+                        <img src="public/assets/icons/canva.svg" alt="Canva" class="h-16 w-16 object-contain" />
+                    </a>
+
+                    <!-- HTML 5 Icon -->
+                    <a href="#" title="HTML 5"
+                        class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-4 xl:mx-4"
+                        data-aos="fade-up">
+                        <img src="public/assets/icons/html5.svg" alt="HTML" class="h-16 w-16 object-contain" />
+                    </a>
+
+                    <!-- CSS Icon -->
+                    <a href="#" title="CSS"
+                        class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-4 xl:mx-4"
+                        data-aos="fade-down">
+                        <img src="public/assets/icons/css.svg" alt="CSS" class="h-16 w-16 object-contain" />
+                    </a>
+
+                    <!-- Javascript Icon -->
+                    <a href="#" title="Javascript"
+                        class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-4 xl:mx-4"
+                        data-aos="fade-up">
+                        <img src="public/assets/icons/javascript.svg" alt="Javascript" class="h-16 w-16 object-contain" />
+                    </a>
+
+                    <!-- Bootstrap Icon -->
+                    <a href="#" title="Bootstrap"
+                        class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-4 xl:mx-4"
+                        data-aos="fade-down">
+                        <img src="public/assets/icons/bootstrap.svg" alt="Bootstrap" class="h-16 w-16 object-contain" />
+                    </a>
+
+                    <!-- Tailwind CSS Icon -->
+                    <a href="#" title="Tailwind"
+                        class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-4 xl:mx-4"
+                        data-aos="fade-up">
+                        <img src="public/assets/icons/tailwind.svg" alt="Tailwind CSS" class="h-16 w-16 object-contain" />
+                    </a>
+
+                    <!-- React Icon -->
+                    <a href="#" title="React"
+                        class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-4 xl:mx-4"
+                        data-aos="fade-down">
+                        <img src="public/assets/icons/react.svg" alt="React" class="h-16 w-16 object-contain" />
+                    </a>
+
+                    <!-- Vue Icon -->
+                    <a href="#" title="Vue"
+                        class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-4 xl:mx-4"
+                        data-aos="fade-up">
+                        <img src="public/assets/icons/vue.svg" alt="Vue" class="h-16 w-16 object-contain" />
+                    </a>
+
+                    <!-- Codeigniter Icon -->
+                    <a href="#" title="CodeIgniter"
+                        class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-4 xl:mx-4"
+                        data-aos="fade-down">
+                        <img src="public/assets/icons/codeigniter.svg" alt="Codeigniter"
+                            class="h-16 w-16 object-contain" />
+                    </a>
+
+                    <!-- Laravel Icon -->
+                    <a href="#" title="Laravel"
+                        class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-4 xl:mx-4"
+                        data-aos="fade-up">
+                        <img src="public/assets/icons/laravel.svg" alt="Laravel" class="h-16 w-16 object-contain" />
+                    </a>
+
+                    <!-- Mysql Icon -->
+                    <a href="#" title="Mysql"
+                        class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-4 xl:mx-4"
+                        data-aos="fade-down-left">
+                        <img src="public/assets/icons/mysql.svg" alt="Mysql" class="h-16 w-16 object-contain" />
+                    </a>
+
+                    <!-- Vscode Icon -->
+                    <a href="#" title="Vscode"
+                        class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-4 xl:mx-4"
+                        data-aos="fade-up-right">
+                        <img src="public/assets/icons/vscode.svg" alt="Vscode" class="h-16 w-16 object-contain" />
+                    </a>
+
+                    <!-- Cursor Icon -->
+                    <a href="#" title="Cursor"
+                        class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-4 xl:mx-4"
+                        data-aos="fade-up">
+                        <img src="public/assets/icons/cursor.svg" alt="Cursor" class="h-16 w-16 object-contain" />
+                    </a>
+
+                    <!-- Autopsy Icon -->
+                    <a href="#" title="Autopsy"
+                        class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-4 xl:mx-4"
+                        data-aos="fade-down">
+                        <img src="public/assets/icons/autopsy.svg" alt="Autopsy" class="h-16 w-16 object-contain" />
+                    </a>
+
+                    <!-- Wireshark Icon -->
+                    <a href="#" title="Wireshark" class=" mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100
+                        hover:grayscale-0 lg:mx-4 xl:mx-4" data-aos="fade-up">
+                        <img src="public/assets/icons/wireshark.svg" alt="Wireshark" class="h-16 w-16 object-contain" />
+                    </a>
+
+                    <!-- NMAP Icon -->
+                    <a href="#" title="NMAP" class=" mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100
+                        hover:grayscale-0 lg:mx-4 xl:mx-4" data-aos="fade-up">
+                        <img src="public/assets/icons/nmap.svg" alt="NMAP" class="h-16 w-16 object-contain" />
+                    </a>
+
+                    <!-- Oracle VM Icon -->
+                    <a href="#" title="Oracle VM"
+                        class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-4 xl:mx-4"
+                        data-aos="fade-down">
+                        <img src="public/assets/icons/virtualbox.svg" alt="Oracle VM" class="h-16 w-16 object-contain" />
+                    </a>
+
+                    <!-- Kali Linux Icon -->
+                    <a href="#" title="Kali Linux"
+                        class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-4 xl:mx-4"
+                        data-aos="fade-up">
+                        <img src="public/assets/icons/kalilinux.svg" alt="Kali Linux" class="h-16 w-16 object-contain" />
+                    </a>
+
+                    <!-- Github Icon -->
+                    <a href="#" title="Github"
+                        class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-4 xl:mx-4"
+                        data-aos="fade-down">
+                        <img src="public/assets/icons/github.svg" alt="Github" class="h-16 w-16 object-contain" />
+                    </a>
+
+                    <!-- Vercel Icon -->
+                    <a href="#" title="Vercel"
+                        class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-4 xl:mx-4"
+                        data-aos="fade-up">
+                        <img src="public/assets/icons/vercel.svg" alt="Github" class="h-16 w-16 object-contain" />
+                    </a>
+
+                    <!-- Word Icon -->
+                    <a href="#" title="Word"
+                        class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-4 xl:mx-4"
+                        data-aos="fade-down">
+                        <img src="public/assets/icons/word.svg" alt="Github" class="h-16 w-16 object-contain" />
+                    </a>
+
+                    <!-- Excel Icon -->
+                    <a href="#" title="Excel"
+                        class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-4 xl:mx-4"
+                        data-aos="fade-up">
+                        <img src="public/assets/icons/excel.svg" alt="Github" class="h-16 w-16 object-contain" />
+                    </a>
+
+                    <!-- Power Point Icon -->
+                    <a href="#" title="Powerpoint"
+                        class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-4 xl:mx-4"
+                        data-aos="fade-up-left">
+                        <img src="public/assets/icons/powerpoint.svg" alt="Power Point"
+                            class="h-16 w-16 object-contain" />
+                    </a>
+                </div>
+            </div>
+        </div>
+        <svg class="mt-32 fill-[#F1F5F9] dark:fill-[#0F172A]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"
+            preserveAspectRatio="none" width="100%" height="160">
+            <path fill-opacity="1"
+                d="M0,128L30,122.7C60,117,120,107,180,149.3C240,181,300,235,360,224C420,213,480,139,540,117.3C600,96,660,128,720,122.7C780,117,840,75,900,69.3C960,64,1020,96,1080,128C1140,160,1200,192,1260,197.3C1320,203,1380,181,1410,170.7L1440,160L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z">
+            </path>
+        </svg>
+    </section>
+    <!-- Tech Stack Section End -->
+
+    <!-- Blog Section Start -->
+    <section id="blog" class="bg-slate-100 pt-24 pb-32 dark:bg-dark">
+        <!-- Container Utama: memastikan konten terpusat dan responsif -->
+        <div class="container mx-auto px-6 md:px-12">
+            <!-- Judul & Deskripsi Section -->
+            <div class="w-full px-4">
+                <div class="mx-auto mb-16 max-w-xl text-center" data-aos="flip-left">
+                    <!-- Sub-heading kecil -->
+                    <h4 class="mb-2 text-lg font-semibold text-primary">
+                        Blog
+                    </h4>
+                    <!-- Heading utama -->
+                    <h2 class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl leading-relaxed text-center tracking-wide"
+                        style="font-family: 'Clash Display', sans-serif; word-spacing: 4px;">
+                        Recent Articles
+                    </h2>
+                    <!-- Deskripsi singkat -->
+                    <p class="text-md font-medium text-secondary md:text-lg">
+                        Explore my latest articles covering insights,
+                        reviews, and expert tips on various topics. Stay
+                        informed and inspired with my fresh content.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Menggunakan flex-wrap dan items-stretch agar setiap kartu di baris yang sama memiliki tinggi yang seragam -->
+            <div class="-mx-4 flex flex-wrap items-stretch justify-center">
+                <!-- Kartu Blog #1 -->
+                <div class="mb-10 w-full px-4 lg:w-1/2 xl:w-1/3" data-aos="flip-up">
+                    <div
+                        class="flex h-full flex-col overflow-hidden rounded-xl bg-white shadow-lg transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-xl dark:bg-slate-800">
+                        <img src="public/assets/blog/blog1.png" alt="Programming Code"
+                            class="h-48 w-full object-cover object-center m-auto" />
+                        <div class="flex flex-1 flex-col py-8 px-6">
+                            <h3>
+                                <a href="https://medium.com/@zurinanurfitri00/molaundry-cd81148630f2" target="_blank"
+                                    class="mb-3 block truncate text-xl font-semibold text-dark hover:text-primary
+                                    dark:text-white" style="font-family: 'Clash Display', sans-serif; word-spacing:
+                                    4px;">
+                                    Mo Laundry
+                                </a>
+                            </h3>
+                            <p class="mb-6 text-base font-medium text-secondary">
+                                In this project, I served as the team leader, guiding our team throughout the UINMALANG
+                                Summer Program
+                            </p>
+                            <div class="mt-auto">
+                                <a href="https://medium.com/@zurinanurfitri00/molaundry-cd81148630f2" target="_blank"
+                                    class="inline-block rounded-lg bg-primary py-2 px-4 text-sm font-medium text-white transition hover:opacity-80">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Akhir Wrapper Kartu Blog -->
+        </div>
+        <!-- Akhir Container -->
+    </section>
+    <!-- Blog Section End -->
+
+    <!-- Parallax Background Start -->
+    <section class="jarallax relative flex h-[400px] items-center justify-center overflow-hidden bg-black" data-jarallax
+        data-speed="0.3">
+        <!-- Gambar Parallax -->
+        <img class="jarallax-img h-full w-full object-cover" src="public/assets/img/parallax2.jpg" alt="Parallax Image" />
+
+        <!-- Konten Quote -->
+        <blockquote class="relative z-10 max-w-2xl px-8 text-center text-white drop-shadow-xl" data-aos="zoom-in" style="
+                    font-family: 'Clash Display', sans-serif;
+                    font-size: 2rem;
+                    font-weight: 600;
+                ">
+            <!-- Ikon Kutipan -->
+            <svg class="mx-auto mb-4 h-10 w-10 text-gray-200" fill="currentColor" viewBox="0 0 32 32">
+                <path
+                    d="M10.907 14.857c-1.067 0-1.899 0.214-2.494 0.643-0.597 0.429-1.021 1.018-1.273 1.765-0.251 0.75-0.376 1.536-0.376 2.361v0.321c0 0.286 0.018 0.607 0.054 0.964 0.036 0.357 0.054 0.607 0.054 0.75 0 0.214-0.089 0.393-0.268 0.536-0.179 0.143-0.339 0.214-0.482 0.214h-1.214c-0.214 0-0.393-0.071-0.536-0.214-0.143-0.143-0.214-0.321-0.214-0.536v-0.143c0-1.214 0.161-2.357 0.482-3.429 0.321-1.071 0.768-2.018 1.339-2.839 0.571-0.821 1.25-1.464 2.036-1.929 0.786-0.464 1.696-0.696 2.732-0.696 0.429 0 0.839 0.071 1.232 0.214 0.393 0.143 0.679 0.339 0.857 0.589 0.179 0.25 0.268 0.536 0.268 0.857 0 0.214-0.089 0.429-0.268 0.643-0.179 0.214-0.411 0.321-0.696 0.321-0.214 0-0.429-0.036-0.643-0.107-0.214-0.071-0.393-0.143-0.536-0.214-0.143-0.071-0.286-0.107-0.429-0.107zM22.036 14.857c-1.071 0-1.911 0.214-2.518 0.643-0.607 0.429-1.054 1.018-1.339 1.768-0.286 0.75-0.429 1.536-0.429 2.357v0.321c0 0.286 0.018 0.607 0.054 0.964 0.036 0.357 0.054 0.607 0.054 0.75 0 0.214-0.071 0.393-0.214 0.536-0.143 0.143-0.321 0.214-0.536 0.214h-1.214c-0.214 0-0.393-0.071-0.536-0.214-0.143-0.143-0.214-0.321-0.214-0.536v-0.143c0-1.214 0.161-2.357 0.482-3.429 0.321-1.071 0.768-2.018 1.339-2.839 0.571-0.821 1.25-1.464 2.036-1.929 0.786-0.464 1.696-0.696 2.732-0.696 0.429 0 0.839 0.071 1.232 0.214 0.393 0.143 0.679 0.339 0.857 0.589 0.179 0.25 0.268 0.536 0.268 0.857 0 0.214-0.089 0.429-0.268 0.643-0.179 0.214-0.411 0.321-0.696 0.321-0.214 0-0.429-0.036-0.643-0.107-0.214-0.071-0.393-0.143-0.536-0.214-0.143-0.071-0.286-0.107-0.429-0.107z" />
+            </svg>
+
+            <!-- Teks Quote -->
+            <p class="leading-tight">
+                Every line of code and pixel weaves a tale of innovation Let
+                your masterpiece begin
+            </p>
+        </blockquote>
+    </section>
+    <!-- Parallax Background End -->
+
+    <!-- Contact Section Start -->
+    <section id="contact" class="pt-24 dark:bg-slate-800">
+        <div class="container">
+            <div class="w-full px-4">
+                <div class="mx-auto mb-16 max-w-xl text-center" data-aos="fade-up">
+                    <h4 class="mb-2 text-lg font-semibold text-primary">
+                        Contact
+                    </h4>
+                    <h2 class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl leading-relaxed text-center tracking-wide"
+                        style="font-family: 'Clash Display', sans-serif; word-spacing: 4px;">
+                        Get In Touch
+                    </h2>
+                    <p class="text-md font-medium text-secondary md:text-lg">
+                        I am available for professional collaborations,
+                        business inquiries, or any discussions regarding
+                        potential opportunities
+                    </p>
+                </div>
+            </div>
+
+            <form>
+                <div class="w-full lg:mx-auto lg:w-2/3">
+                    <!-- Input Name -->
+                    <div class="mb-8 w-full px-4" data-aos="fade-right">
+                        <label for="name" class="mb-2 block text-base font-bold text-primary">Name
+                            <span style="color: red;">*</span>
+                        </label>
+                        <input type="text" id="name" placeholder="Enter your name..."
+                            class="w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
+                        <span id="name-warning" class="block mt-2" style="color: red; display: none;">
+                            Name cannot be empty.
+                        </span>
+                    </div>
+
+                    <!-- Input Email -->
+                    <div class="mb-8 w-full px-4" data-aos="fade-left">
+                        <label for="email" class="mb-2 block text-base font-bold text-primary">
+                            Email
+                            <span style="color: red;">*</span>
+                        </label>
+                        <input type="email" id="email" placeholder="Enter your email..."
+                            class="w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
+                        <span id="emailWarning" class="block mt-2" style="color: red; display: none;">
+                            Email must not be empty.
+                        </span>
+                        <span id="email-warning" class="block mt-2" style="color: red; display: none;">
+                            Invalid email!
+                        </span>
+                    </div>
+
+                    <!-- Input Message -->
+                    <div class="mb-8 w-full px-4" data-aos="fade-right">
+                        <label for="message" class="mb-2 block text-base font-bold text-primary">Message
+                            <span style="color: red;">*</span>
+                        </label>
+                        <textarea id="message" placeholder="Enter your message..."
+                            class="h-32 w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"></textarea>
+                        <span id="message-warning" class="block mt-2" style="color: red; display: none;">
+                            Message cannot be empty.
+                        </span>
+                    </div>
+
+                    <!-- Button Send -->
+                    <div class="w-full px-4" data-aos="fade-left">
+                        <button id="send-button" type="submit"
+                            class="w-full rounded-full bg-primary py-3 px-8 text-base font-semibold text-white transition duration-500 hover:opacity-80 hover:shadow-lg">
+                            Send
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+        <svg class="mt-32 fill-[#0F172A] dark:fill-[#0F172A]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"
+            preserveAspectRatio="none" width="100%" height="160">
+            <path fill-opacity="1"
+                d="M0,128L30,128C60,128,120,128,180,133.3C240,139,300,149,360,165.3C420,181,480,203,540,202.7C600,203,660,181,720,160C780,139,840,117,900,106.7C960,96,1020,96,1080,112C1140,128,1200,160,1260,176C1320,192,1380,192,1410,192L1440,192L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z">
+            </path>
+        </svg>
+    </section>
+    <!-- Contact Section End -->
+
+    <!-- Footer Start -->
+    <footer class="bg-[#0F172A] py-12 text-white">
+        <div class="container mx-auto px-8">
+            <!-- Grid: 4 item (Baytech, More to Know, Contact Us, Newsletter) -->
+            <div
+                class="grid grid-cols-1 gap-y-8 md:grid-cols-2 md:gap-x-6 md:gap-y-6 lg:grid-cols-[1.5fr,1fr,1fr,2fr] lg:items-start lg:gap-x-12">
+                <!-- 1) Baytech -->
+                <!-- HAPUS max-w-sm supaya lebarnya tidak dibatasi -->
+                <div class="space-y-2" data-aos="fade-right">
+                    <div class="mb-3 flex items-center text-2xl font-bold">
+                        <img src="public/assets/logo.svg" alt="logo" class="mr-2 h-8 w-8" />
+                        Baytech
+                    </div>
+                    <p class="text-gray-400 max-w-sm">
+                        Leading technology solutions, innovative digital
+                        services, and premium IT consulting.
+                    </p>
+                    <div class="pt-3">
+                        <!-- Sosial Media Icons -->
+                        <div class="flex items-center justify-start space-x-3">
+                            <!-- Instagram -->
+                            <a href="https://www.instagram.com/baytech.ux/" target="_blank"
+                                class="flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                                <img src="public/assets/icons/instagram.svg" alt="Instagram"
+                                    class="w-5 h-5 object-cover grayscale hover:grayscale-0 transition duration-300" />
+                            </a>
+
+                            <!-- Linkedin -->
+                            <a href="https://www.linkedin.com/in/achmadbayu-al/" target="_blank"
+                                class="flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                                <img src="public/assets/icons/linkedin.svg" alt="Linkedin"
+                                    class="w-5 h-5 object-cover grayscale hover:grayscale-0 transition duration-300" />
+                            </a>
+
+                            <!-- Github -->
+                            <a href="https://github.com/yubayuu1" target="_blank"
+                                class="flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                                <img src="public/assets/icons/github.svg" alt="Github"
+                                    class="w-5 h-5 object-cover grayscale hover:grayscale-0 transition duration-300 bg-white rounded-full" />
+                            </a>
+
+                            <!-- Dribbble -->
+                            <a href="https://dribbble.com/BayuAL/" target="_blank"
+                                class="flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                                <img src="public/assets/icons/dribble.svg" alt="Dribble"
+                                    class="w-5 h-5 object-cover grayscale hover:grayscale-0 transition duration-300" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2) More to Know -->
+                <div class="space-y-2" data-aos="fade-down">
+                    <h3 class="mb-4 text-lg font-semibold">More to Know</h3>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="#" class="text-gray-400 transition hover:text-primary">About</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 transition hover:text-primary">Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 transition hover:text-primary">Tech Stack</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 transition hover:text-primary">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 3) Contact Us -->
+                <div class="space-y-2" data-aos="fade-up">
+                    <h3 class="mb-4 text-lg font-semibold">Contact Me</h3>
+
+                    <!-- Phone -->
+                    <div class="flex items-center gap-2">
+                        <div class="w-6 h-6 flex justify-center items-center">
+                            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                class="w-5 h-5 phone-icon transition fill-gray-400 hover:fill-white">
+                                <title>Phone</title>
+                                <path
+                                    d="M6.615 10.809c1.563 3.656 4.92 6.974 8.575 8.556.508.188 1.066.188 1.575.063a2.266 2.266 0 0 0 1.074-.582l1.856-1.856c.282-.282.375-.705.219-1.066l-1.313-3.188c-.188-.375-.563-.594-1-.563l-2.719.188a1.033 1.033 0 0 1-.75-.281l-2.719-2.719a1.033 1.033 0 0 1-.281-.75l.188-2.719c.031-.438-.188-.813-.563-1L8.075 2.061a.965.965 0 0 0-1.066.219L5.153 4.136c-.313.313-.5.719-.563 1.156-.156 1.188.063 2.438.438 3.656.281.875.656 1.75 1.125 2.625z" />
+                            </svg>
+                        </div>
+                        <a href="https://wa.me/628970415854" target="_blank"
+                            class="text-gray-400 hover:text-primary transition">
+                            +6289-7041-5854
+                        </a>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="flex items-center gap-2">
+                        <div class="w-6 h-6 flex justify-center items-center">
+                            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                class="w-4 h-4 gmail-icon transition fill-gray-400 hover:fill-white">
+                                <title>Gmail</title>
+                                <path
+                                    d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z" />
+                            </svg>
+                        </div>
+                        <a href="mailto:ahmadbayualbaitalfatich@gmail.com" target="_blank"
+                            class="text-gray-400 hover:text-primary transition">
+                            ahmadbayualbaitalfatich@gmail.com
+                        </a>
+                    </div>
+
+                    <!-- Instagram -->
+                    <div class="flex items-center gap-2">
+                        <div class="w-6 h-6 flex justify-center items-center">
+                            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                class="w-4 h-4 instagram-icon fill-gray-400">
+                                <title>Instagram</title>
+                                <path
+                                    d="M7.125 2C4.21 2 2 4.21 2 7.125v9.75C2 19.79 4.21 22 7.125 22h9.75C19.79 22 22 19.79 22 16.875v-9.75C22 4.21 19.79 2 16.875 2h-9.75zM12 7.313a4.688 4.688 0 1 1 0 9.375 4.688 4.688 0 0 1 0-9.375zm0 1.563a3.125 3.125 0 1 0 0 6.25 3.125 3.125 0 0 0 0-6.25zM17.563 5.5a.875.875 0 1 1 0 1.75.875.875 0 0 1 0-1.75z" />
+                            </svg>
+                        </div>
+                        <a href="https://www.instagram.com/baytech.ux/" target="_blank"
+                            class="text-gray-400 hover:text-primary transition">
+                            @baytech.ux
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 4) Newsletter -->
+                <div class="space-y-2" id="newsletter" data-aos="fade-left">
+                    <h3 class="mb-4 text-lg font-semibold">
+                        Join My Exclusive Membership Newsletter
+                    </h3>
+                    <p class="mb-4 text-gray-400">
+                        Enter your email address to get updates on premium
+                        technology solutions, special events, and exclusive
+                        membership benefits.
+                    </p>
+                    <div class="relative">
+                        <input type="email" placeholder="Enter your email..."
+                            class="w-full rounded-full bg-gray-800 px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary" />
+                        <button
+                            class="absolute right-1 top-1 bottom-1 rounded-full bg-primary px-6 text-sm font-semibold text-white transition duration-500 hover:opacity-80 hover:shadow-lg">
+                            SUBSCRIBE
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div
+                class="mt-10 flex flex-col items-center justify-between border-t border-gray-700 pt-6 text-sm text-gray-400 md:flex-row">
+                <p>© 2024 Baytech. All Rights Reserved</p>
+                <div class="mt-3 flex space-x-6 md:mt-0">
+                    <a href="#" class="hover:text-primary">Terms of Service</a>
+                    <a href="#" class="hover:text-primary">Privacy Policy</a>
+                    <a href="#" class="hover:text-primary">Cookies</a>
+                    <a href="#" class="hover:text-primary">Legal</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Back to top Start -->
+    <a href="#home" id="to-top" class="fixed bottom-6 right-4 h-14 w-14 flex items-center justify-center rounded-full bg-primary
+        p-4 transition-all duration-300 hover:scale-110 hover:bg-opacity-90 hover:shadow-lg active:scale-95">
+        <span
+            class="mt-2 block h-5 w-5 rotate-45 border-t-2 border-l-2 border-white transition-all duration-300"></span>
+    </a>
+    <!-- Back to top End -->
+
+    <script src="public/js/script.js"></script>
+</body>
+
+</html>
